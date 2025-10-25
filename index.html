@@ -3,23 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Close Button Example</title>
+    <style>
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 5px 10px;
+        }
+        .close-btn:hover {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <h1>html headings</h1>
-    <h2>paragraph</h2>
-    <h3>formatting</h3>
-    <img src="./assets/nature.jpg" alt="nature image" width="200px"height="200px">
-    <p>Natural History Museum (Wildlife Photographer of the Year): Showcases award-winning nature photography from its annual competition. The images are recognized for their artistic composition, technical innovation, and truthful interpretation of the natural world.</p>
-    <ul>
-        type="alpharomic"
-               
-        <li><img src="./assets/place 1.jpg" alt="place image" width="200px"height="200px"><span><p>Hyderabad is the capital and largest city of the South Indian state of Telangana. It was ruled by the Qutub Shahis, Mughals and the Nizams which shaped its history. The city is noted for its monuments which includes the masterpiece of Charminar and the fort of Golconda. There are a multitude of masjids, temples, churches and bazaars in the city.</p></span></li>
-        <li><img src="./assets/place 2.jpg" alt="place image" width="200px"height="200px"><p> A Hindu temple made of white marble located on top of a hill overlooking the city.</p></li>
-    </ul>
-    <ol>type-1= alpha numerals
-        <li><img src="./assets/place 1.jpg" alt="place image" width="200px"height="200px"><span><p>Hyderabad is the capital and largest city of the South Indian state of Telangana. It was ruled by the Qutub Shahis, Mughals and the Nizams which shaped its history. The city is noted for its monuments which includes the masterpiece of Charminar and the fort of Golconda. There are a multitude of masjids, temples, churches and bazaars in the city.</p></span></li>
-        <li><img src="./assets/place 2.jpg" alt="place image" width="200px"height="200px"><p> A Hindu temple made of white marble located on top of a hill overlooking the city.</p></li></ol>
-
+    <button class="close-btn" onclick="window.close()">✕</button>
 </body>
 </html>
+/* Flex layout and main card styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 16px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* main div requested: 100px x 100px with changed background */
+.main-card {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #b3e5fc 0%, #81d4fa 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* ensure the image fits the 100x100 area */
+.main-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+</style>
